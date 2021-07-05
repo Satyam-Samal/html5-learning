@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Registration Forms </title>
+  <script>
+    function myFunction()
+        	{
+              var eml = document.forms["myForm"]["Email"].value;
+              var pw = document.forms["myForm"]["Password"].value;
+                if(eml=="satyamsamal66@gmail.com" && pw=="s1234")
+                {
+                  window.location.href="home.html";
+                }
+                else
+                {
+                	alert("Invalid Email and Password");
+                }
+          }
+  </script>
+</head>
+
+<body bgcolor="powderblue">
+  <center>
+    <h2> Login Page </h2>
+    <form name="myForm" method="post">
+      <table>
+        <tr>
+          <td>
+            Email:
+          </td>
+          <td>
+            <input type="Email" name="Email" id="Email" placeholder="Enter Your Email "/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Password:
+          </td>
+          <td>
+            <input type="Password" name="Password" id="Password" placeholder="Enter Your Password"/>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button type="button" id="logButton" onclick="myFunction()">Login</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="page.html">
+              Sign Up
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="page2.html">
+              Forget Password
+            </a>
+          </td>
+        </tr>
+      </table>
+    </form>
+</body>
+
+</html>

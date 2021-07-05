@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Forget Password Page</title>
+  <script>
+    function myFunction()
+      {
+        var pn=document.Forms["myForms"]["Number"].value;
+
+        if((pn) && (pn.trim() !== ''))
+        {
+          window.location.href="page3.html";
+        }
+        else
+        {
+          alert("Please Enter Your Ph. Number");
+        }
+      }
+  </script>
+</head>
+
+<body bgcolor="PowderBlue">
+  <form>
+    <table>
+      <tr>
+        <td>
+          Phone No.:
+        </td>
+        <td>
+          <input type="Number" name="Number" id="Number" placeholder="Enter Your Ph.Number"/>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button type="button" id="codeButton" onclick="myFunction()">Get Code</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>
