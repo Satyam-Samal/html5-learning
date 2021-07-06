@@ -4,17 +4,17 @@
 <head>
   <title> Registration Forms </title>
   <script>
-    function myFunction()
+    function validatelogFunction()
         	{
-              var eml = document.forms["myForm"]["Email"].value;
-              var pw = document.forms["myForm"]["Password"].value;
-                if(eml=="satyamsamal66@gmail.com" && pw=="s1234")
+              var emil = document.forms["logForm"]["Email"].value;
+              var pwd = document.forms["logForm"]["Password"].value;
+                if((emil && pwd) && (emil && pwd.trim()!=''))
                 {
                   window.location.href="home.html";
                 }
                 else
                 {
-                	alert("Invalid Email and Password");
+                	alert("Please Enter Your Email and Password");
                 }
           }
   </script>
@@ -23,7 +23,7 @@
 <body bgcolor="powderblue">
   <center>
     <h2> Login Page </h2>
-    <form name="myForm" method="post">
+    <form name="logForm" method="post">
       <table>
         <tr>
           <td>
@@ -38,24 +38,24 @@
             Password:
           </td>
           <td>
-            <input type="Password" name="Password" id="Password" placeholder="Enter Your Password"/>
+            <input type="Password" name="Password" id="Password" placeholder="Enter Your Password" maxlength="8"/>
           </td>
         </tr>
         <tr>
           <td colspan="2">
-            <button type="button" id="logButton" onclick="myFunction()">Login</button>
+            <button type="button" id="logButton" onclick="validatelogFunction()">Login</button>
           </td>
         </tr>
         <tr>
           <td>
-            <a href="page.html">
+            <a href="signup.html">
               Sign Up
             </a>
           </td>
         </tr>
         <tr>
           <td>
-            <a href="page2.html">
+            <a href="forgetpassword.html">
               Forget Password
             </a>
           </td>

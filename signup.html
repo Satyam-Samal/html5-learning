@@ -3,12 +3,19 @@
 
 <head>
   <title> SIGN UP PAGE </title>
+  <script>
+    function onCancel(){
+      if (/*Confirm*/){
+        //Navigate to LogIn Page
+      }
+    }
+  </script>
 </head>
 
 <body bgcolor="powderblue">
   <center>
     <h2> Sign Up </h2>
-    <form action="page.html" method="get">
+    <form action="index.html">
       <table>
         <tr>
           <td>
@@ -36,15 +43,14 @@
         </tr>
         <tr>
           <td>
-            Gender:*
+            <lebel for="genders"> Gender:* </lebel>
           </td>
           <td>
-            <level for="html"> MALE </level>
-            <input type="radio" name="Fav_Language" value="male"/>
-            <level for="html"> FEMALE </level>
-            <input type="radio" name="Fav_Language" value="female"/>
-            <level for="html"> OTHER </level>
-            <input type="radio" name="Fav_Language" value="other"/>
+            <select id="genders" name="genders">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
           </td>
         </tr>
         <tr>
@@ -81,10 +87,11 @@
         </tr>
         <tr>
           <td colspan="2">
-            <input type="Submit" value="Cancel"/>
+            <button type="Button" id="cancelButton" onclick="onCancel();"> Cancel </button>
+
           </td>
           <td colspan="2">
-            <input type="Submit" value="Submit"/>
+            <button type="submit" id="submitButton"> Submit</button>
           </td>
         </tr>
       </table>
